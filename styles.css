@@ -2,5 +2,19 @@ body {
     background-color: #fce9e4;
 }
 
+
+#logo {
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 300px;
+}
+
+#selfie {
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 300px;
+}
 /* colour of font - #1b1f26 */
 /* palevioletred - #e4578f, #f5a189 - lightsalmon, #f5a189 lightsalmon */
