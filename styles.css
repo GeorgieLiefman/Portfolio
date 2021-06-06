@@ -1,8 +1,69 @@
+html, body {
+        margin: 0;
+        padding: 0;
+  }
+
 body {
-    background-color: #fce9e4;
+    background-color: #white;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
 }
 
+footer {
+    background-color: #4f9bf8;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
+#copyright_info{
+    border:1px solid black;
+    text-align: center;
+}
+
+#sitemap {
+    border:1px solid black;
+    text-align: center;
+}
+
+#footer-images {
+    border:1px solid black;
+    display: inline;
+}
+
+#footer-images ul {
+    padding: 0;
+    display: inline;
+  }
+  
+#footer-images li {
+    list-style: none;
+    margin: 0 10px;
+    display: inline;
+  }
+
+  #footer-images img {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40px;
+  }
+
+  #footer-images a {
+    display: flex;
+    flex-direction: row;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
 #logo {
     height: auto; 
     width: auto; 
@@ -11,10 +72,8 @@ body {
 }
 
 #selfie {
-    height: auto; 
-    width: auto; 
-    max-width: 300px; 
-    max-height: 300px;
+        width: 100%;
+        height: auto;
 }
 /* colour of font - #1b1f26 */
 /* palevioletred - #e4578f, #f5a189 - lightsalmon, #f5a189 lightsalmon */
