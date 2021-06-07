@@ -7,13 +7,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-  
-a {
-
-    color: #ffffff;
-}
-
-  
+ 
   /* Top navigation bar with links to other pages and logo styling */
   
 .top_bar { 
@@ -48,8 +42,6 @@ a {
     font-weight: bold;
 }
   
-  
-
 .top_bar .logo img{
     max-height: 40px;
     max-width: 40px;
@@ -61,7 +53,7 @@ a {
 .top_bar .links {
     clear: both;
     max-height: 0px;
-    transition: max-height 20s linear;
+    transition: max-height .4s linear;
 }
   
   /* Drop-down menu display */

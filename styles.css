@@ -3,13 +3,6 @@ html, body {
     padding: 0;
   }
 
-body {
-    background-color: #white;
-    min-height: 100vh;
-    min-width: 100vw;
-    display: flex;
-    flex-direction: column;
-}
 
 footer {
     background-color: #4f9bf8;
@@ -70,10 +63,3 @@ footer {
     max-width: 300px; 
     max-height: 300px;
 }
-
-#selfie {
-        width: 100%;
-        height: auto;
-}
-/* colour of font - #1b1f26 */
-/* palevioletred - #e4578f, #f5a189 - lightsalmon, #f5a189 lightsalmon */
