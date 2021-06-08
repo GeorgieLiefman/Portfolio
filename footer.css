@@ -20,109 +20,105 @@ body {
     margin: 0;
     padding: 0;
   }
-  ul {
+
+ul {
     list-style: none;
     padding-left: 0;
   }
-  footer {
+
+footer {
     background-color: #4f9bf8;
     color: #ffffff;
+    font-size: 11pt;
     line-height: 0;
   }
-  footer a {
+
+footer a {
     text-decoration: none;
-    color: #eee;
+    color: #ffffff;
   }
-  a:hover {
-    text-decoration: underline;
-  }
-  .ft-title {
-    color: #fff;
-    font-family: "Merriweather", serif;
-    font-size: 1.375rem;
-    padding-bottom: 0.625rem;
-  }
-  /* Sticks footer to bottom */
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-  .container {
-    flex: 1;
-  }
-  /* Footer main */
-  .ft-main {
-    padding: 1.25rem 1.875rem;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  @media only screen and (min-width: 29.8125rem /* 477px */) {
-    .ft-main {
-      justify-content: space-evenly;
-    }
-  }
-  @media only screen and (min-width: 77.5rem /* 1240px */) {
-    .ft-main {
-      justify-content: space-evenly;
-    }
-  }
-  .ft-main-item {
-    padding: 1.25rem;
-    min-width: 12.5rem;
+
+a:hover {
+    color: #f80011;
   }
   
-  /* Footer main | Newsletter form */
-  form {
-    display: flex;
-    flex-wrap: wrap;
+  /* Command makes footer stick to bottom of the page */
+  
+.container {
+    flex: 1;
   }
-  input[type="email"] {
-    border: 0;
-    padding: 0.625rem;
-    margin-top: 0.3125rem;
+
+  /* Display for section containing icons and links to social media */
+
+  sm_icons {
+    padding: 0px 20px;
   }
-  input[type="submit"] {
-    background-color: #00d188;
-    color: #fff;
-    cursor: pointer;
-    border: 0;
-    padding: 0.625rem 0.9375rem;
-    margin-top: 0.3125rem;
-  }
-  /* Footer social */
-  .ft-social {
-    padding: 0 1.875rem 1.25rem;
-  }
-  .ft-social-list {
+
+.sm_list {
     display: flex;
     justify-content: center;
-    border-top: 1px #777 solid;
-    padding-top: 1.25rem;
+    border-bottom: 1px #ffffff ridge; 
   }
-  .ft-social-list li {
-    margin: 0.5rem;
-    font-size: 1.25rem;
+
+.sm_list li {
+    margin: 5px;
+    padding: 0px 3px;
   }
-  /* Footer legal */
-  .ft-legal {
-    padding: 0.9375rem 1.875rem;
-    background-color: #333;
+
+.sm_list img {
+    max-width: 33px;
+    max-height: 33px;
   }
-  .ft-legal-list {
+
+  /* Display for section containing copyright info and link to sitemap */
+
+.copy_map_info {
+    padding: 5px 25px;
+    background-color: #0c2a83;
+  }
+
+.copy_map_info_list {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
-  .ft-legal-list li {
-    margin: 0.125rem 0.625rem;
-    white-space: nowrap;
+
+.copy_map_info_list li {
+    margin: 0px 0px;
+    white-space: normal;
   }
-  /* one before the last child */
-  .ft-legal-list li:nth-last-child(2) {
-      flex: 1;
-  }
-  
-  
-  
-  Resources
+ 
+/* Footer bar display for medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    footer {
+        font-size: 12pt;
+      }
+
+      .sm_list img {
+        max-width: 35px;
+        max-height: 35px;
+      }
+    
+      .sm_list li {
+        padding: 0px 10px;
+      }
+}
+
+/* Footer bar display for large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    footer {
+        font-size: 12pt;
+      }      
+    
+    .sm_list img {
+        max-width: 42px;
+        max-height: 42px;
+    }
+
+    .sm_list li {
+        padding: 0px 13px;
+    }
+}
