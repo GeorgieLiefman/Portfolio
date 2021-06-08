@@ -164,6 +164,55 @@ body {
     }
 }
 
+/* Command makes footer stick to bottom of the page and margins for page content*/
+  
+.page_contents {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+
+/* Text styling within page contents */
+.text {
+  padding: 10px 20px 0px 20px;
+  text-align: left;
+}
+
+.text h2 {
+  color: #f80011;
+  font-size: 20pt;
+  text-align: center;
+}
+
+.text p {
+  font-size: 11.5pt;
+  margin-top: 10px;
+}
+
+/* Image styling within page contents */
+
+.sm_icons_main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.sm_icons_main li img {
+  max-height: 90px;
+  max-width: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#github {
+  margin-top: 20px;
+}
+
+/* General display for footer */
+
 footer {
     background-color: #4f9bf8;
     position: fixed;
@@ -176,9 +225,8 @@ footer {
     margin-bottom: auto;
 }
 
-/* General display for footer */
+
 * {
-    
     margin: 0;
     padding: 0;
   }
