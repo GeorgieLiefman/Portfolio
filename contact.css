@@ -211,6 +211,74 @@ body {
   margin-top: 20px;
 }
 
+/* Page content with main social icons and text display for medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+  .text h2 {
+    color: #f80011;
+    font-size: 26pt;
+  }
+  
+  .text p {
+    font-size: 13pt;
+    margin-top: 13px;
+  }
+
+  .sm_icons_main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .sm_icons_main li img {
+    max-height: 115px;
+    max-width: auto;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  
+  #github {
+    margin-top: 50px;
+  }
+}
+
+/* PPage content with main social icons and text display for medium devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+  .text h2 {
+    color: #f80011;
+    font-size: 32pt;
+  }
+  
+  .text p {
+    font-size: 14pt;
+    margin-top: 16px;
+  }
+
+  .sm_icons_main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .sm_icons_main li img {
+    max-height: 150px;
+    max-width: auto;
+    margin-top: 75px;
+    margin-bottom: 5px;
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+  
+  #github {
+    margin-top: 75px;
+  }
+}
+
 /* General display for footer */
 
 footer {
