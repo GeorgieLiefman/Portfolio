@@ -172,12 +172,11 @@ body {
   flex-direction: column;
   justify-content: center;
   flex: 1;
-  align-items: center;
-  margin-bottom: ;
-  
+  align-items: center; 
 }
 
 /* Text styling within page contents */
+
 .text {
   padding: 0px 20px 0px 20px;
   text-align: center;
@@ -206,6 +205,9 @@ body {
 /* Page content image and text display for medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
+
+    /* Text adjustments */
+
   .text h2 {
     color: #f80011;
     font-size: 26pt;
@@ -215,10 +217,13 @@ body {
     font-size: 13pt;
     margin-top: 13px;
   }
+
+    /* Image resizing and redefining borders */
   
   #clipart {
     margin: 50px 0px 20px 0px;
   }
+
   #clipart img{
     max-width: 230px;
     max-height: auto;
@@ -228,12 +233,17 @@ body {
 /* Page content image and text for large devices (laptops/desktops, 992px and up) */
 
 @media only screen and (min-width: 992px) {
+
+  /* Flex display adjusments so content displays side-by-side for large devices */
+
   .page_contents {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
   
+  /* Text adjustments for large devices */
+
   .text {
     text-align: left;
   }
@@ -248,6 +258,8 @@ body {
     margin-top: 13px;
   }
   
+  /* Image resizing and redefining borders for large devices */
+
   #clipart {
     margin: 50px 0px 20px;
   }
@@ -343,6 +355,7 @@ a:hover {
 /* Footer bar display for medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
+
   footer {
       font-size: 12pt;
     }
@@ -360,9 +373,14 @@ a:hover {
 /* Footer bar display for large devices (laptops/desktops, 992px and up) */
 
 @media only screen and (min-width: 992px) {
+
+  /* Text adjustments for large devices */
+
   footer {
       font-size: 12pt;
     }      
+
+  /* Image resizing and redefining padding for large devices */
   
   .sm_list img {
       max-width: 42px;
