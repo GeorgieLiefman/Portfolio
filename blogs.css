@@ -272,6 +272,7 @@ body {
 
 .blog_posts li {
   list-style: disc;
+  font-size: 11pt;
   margin-left: 40px;
 }
 
@@ -302,7 +303,61 @@ body {
 
 
 
+/* Page content image and text display for medium devices (landscape tablets, 768px and up) */
 
+@media only screen and (min-width: 768px) {
+  
+  .blog_list h2 {
+    font-size: 24pt;
+    text-align: center;
+  }
+  
+  .blog_list p {
+    font-size: 12.5pt;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  .blog_index {
+    padding-left: 12%;
+    margin: 5% 10% 5% 10%;
+  }
+
+  .blog_index a {
+    font-size: 12.5pt;  
+  }
+  
+  .blog_list {
+    font-size: 12pt;
+  }
+
+  .post_1, .post_2, .post_3, .post_4, .post_5 {
+    margin: 5% 10% 5% 10%; 
+  }
+
+  .blog_posts p {
+    font-size: 12pt;
+  }
+  
+  .blog_posts h3 {
+    font-size: 16.5pt;
+  }
+  
+  .blog_posts h4 {
+    font-size: 13.5pt;
+  }
+
+  #author_info {
+    font-size: 11pt;
+  }
+
+  .blog_posts img {
+    max-height: auto;
+    max-width: 330px;
+
+
+}
 
 
 
