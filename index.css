@@ -313,7 +313,7 @@ a:hover {
 
 /* Display for section containing icons and links to social media */
 
-  sm_icons {
+  .sm_icons {
     padding: 0px 20px;
   }
 
