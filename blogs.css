@@ -323,15 +323,15 @@ body {
   }
   
   .blog_index {
-    padding-left: 12%;
+    padding-left: 70px;
     margin: 5% 14% 0% 14%;
   }
 
-  .blog_index a {
+  .blog_index a, .blog_posts p, .blog_posts li {
     font-size: 12.5pt;  
   }
 
-  .blog_list {
+  .blog_list li {
     font-size: 12pt;
   }
 
@@ -339,18 +339,14 @@ body {
     margin: 5% 8% 5% 8%; 
   }
 
-  .blog_posts p, .blog_posts li {
-    font-size: 12.5pt;
-  }
-
   .blog_posts h3 {
-    font-size: 16.5pt;
+    font-size: 20pt;
   }
   
   .blog_posts h4 {
-    font-size: 13.5pt;
+    font-size: 14pt;
   }
-
+  
   #author_info {
     font-size: 11pt;
   }
@@ -358,43 +354,50 @@ body {
   .blog_posts img {
     max-height: auto;
     max-width: 330px;
+  }
 }
 
+/* Page content image and text for large devices (laptops/desktops, 992px and up) */
+  
+@media only screen and (min-width: 992px) {
+  .blog_list h2 {
+    font-size: 28pt;
+  }
+  
+  .blog_list p {
+    margin: 0% 30% 0% 30%;
+  }
+  
+  .blog_index {
+    padding-left: 70px;
+    margin: 4% 25% 0% 25%;
+  }
 
+  .blog_index a, .blog_posts p, .blog_posts li, .blog_list p  {
+    font-size: 13pt;  
+  }
 
+  .post_1, .post_2, .post_3, .post_4, .post_5 {
+    margin: 5% 14% 5% 14%; 
+  }
 
+  .blog_posts h3 {
+    font-size: 20pt;
+  }
+  
+  .blog_posts h4 {
+    font-size: 16pt;
+  }
 
+  #author_info {
+    font-size: 12pt;
+  }
+
+  .blog_posts img {
+    max-height: auto;
+    max-width: 400px;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* General display for footer */
 
@@ -474,7 +477,7 @@ a:hover {
   white-space: normal;
 }
 
-/* Footer bar display for medium devices (landscape tablets, 768px and up) */
+/* Footer bar display for medium devices, adjusting image font and sizing (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
 footer {
@@ -491,7 +494,7 @@ footer {
   }
 }
 
-/* Footer bar display for large devices (laptops/desktops, 992px and up) */
+/* Footer bar display for large devices, adjusting image font and sizing (laptops/desktops, 992px and up) */
 
 @media only screen and (min-width: 992px) {
 footer {
@@ -501,10 +504,10 @@ footer {
 .sm_list img {
     max-width: 42px;
     max-height: 42px;
-}
+  }
 
 .sm_list li {
     padding: 0px 13px;
-}
+  }
 }
 

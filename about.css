@@ -417,7 +417,7 @@ a:hover {
   white-space: normal;
 }
 
-/* Footer bar display for medium devices (landscape tablets, 768px and up) */
+/* Footer bar display for medium devices, adjusting image and font sizing (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
 footer {
@@ -434,7 +434,7 @@ footer {
   }
 }
 
-/* Footer bar display for large devices (laptops/desktops, 992px and up) */
+/* Footer bar display for large devices, adjusting image and font sizing (laptops/desktops, 992px and up) */
 
 @media only screen and (min-width: 992px) {
 footer {
@@ -444,11 +444,11 @@ footer {
 .sm_list img {
     max-width: 42px;
     max-height: 42px;
-}
+  }
 
 .sm_list li {
     padding: 0px 13px;
-}
+  }
 }
 
 .blog_posts h3 {
