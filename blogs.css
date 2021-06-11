@@ -1,177 +1,166 @@
-html, body {
-    margin: 0;
-    padding: 0;
-  }
+ /* General styling for body */
+
+ html, body {
+  margin: 0;
+  padding: 0;
+}
 
 body {
-    margin: 0;
-    font-family: 'Roboto Condensed', sans-serif;
-    background-color: white;
-    min-height: 100vh;
-    min-width: 100vw;
-    display: flex;
-    flex-direction: column;
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
- 
-  /* Top navigation bar with links to other pages and logo styling */
-  
+
+/* Top navigation bar with links to other pages and logo styling */
+
 .top_bar { 
-    background-color: #abe0fe;
-    box-shadow: 2px 2px 6px 1px rgba(18, 65, 206, 0.247);
-    position: absolute;
-    width: 100%;
-    height: auto;
-    font-family: 'Roboto Condensed', sans-serif; 
+  background-color: #abe0fe;
+  box-shadow: 2px 2px 6px 1px rgba(18, 65, 206, 0.247);
+  position: fixed;
+  width: 100%;
+  height: auto;
 }
-  
+
 .top_bar ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
-    background-color:rgb(233, 244, 255);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color:rgb(233, 244, 255);
 }
-  
+
 .top_bar li a {
-    display: block;
-    padding: 15px 15px;
-    border-right: 6px hidden #1242ce;
-    text-decoration: none;
-    color: #001861;
+  display: block;
+  padding: 15px 15px;
+  border-right: 6px hidden #1242ce;
+  text-decoration: none;
+  color: #001861;
 }
-  
+
+/* Styling hover effects for navigation bar */
+
 .top_bar li a:hover,
 .top_bar .button:hover {
-    font-size: 20px;
-    color: #1242ce;
-    font-weight: bold;
+  font-size: 20px;
+  color: #1242ce;
+  font-weight: bold;
 }
-  
+
+/* Styling logo in navigation bar */
+
 .top_bar .logo img{
-    max-height: 40px;
-    max-width: 40px;
-    padding: 7px 7px;
+  max-height: 40px;
+  max-width: 40px;
+  padding: 7px 7px;
 }
-  
+
 /* Transition to open drop-down menu */
-  
+
 .top_bar .links {
-    clear: both;
-    max-height: 0px;
-    transition: max-height .4s linear;
+  clear: both;
+  max-height: 0px;
+  transition: max-height .4s linear;
 }
-  
-  /* Drop-down menu display */
-  
+
+/* Drop-down menu display */
+
 .top_bar .display {
-    cursor: pointer;
-    display: inline-block;
-    float: right;
-    padding: 30px 19px;
-    position: relative;
-  }
-  
-.top_bar .display .navigation {
-    background: #f80011;
-    display: block;
-    height: 1.5px;
-    position: relative;
-    transition: .15s linear;
-    width: 22px;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 30px 19px;
+  position: relative;
 }
-  
+
+.top_bar .display .navigation {
+  background: #f80011;
+  display: block;
+  height: 1.5px;
+  position: relative;
+  transition: .15s linear;
+  width: 22px;
+}
+
 .top_bar .display .navigation:before,
 .top_bar .display .navigation:after {
-    background: #f80011;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition:  .15s linear;
-    width: 100%;
+  background: #f80011;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition:  .15s linear;
+  width: 100%;
 }
 
 .top_bar .display .navigation:before {
-    top: 6px;
+  top: 6px;
 }
 
 .top_bar .display .navigation:after {
-    top: -6px;
+  top: -6px;
 }
 
 /* Button to control drop-down menu */
 
 .top_bar .button {
-    display: none;
+  display: none;
 }
 
 .top_bar .button:checked ~ .links {
-    max-height: 600px;
+  max-height: 600px;
 }
 
 .top_bar .button:checked ~ .display .navigation {
-    background: transparent;
+  background: transparent;
 }
 
 .top_bar .button:checked ~ .display .navigation:before {
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .top_bar .button:checked ~ .display .navigation:after {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .top_bar .button:checked ~ .display:not(.steps) .navigation:before,
 .top_bar .button:checked ~ .display:not(.steps) .navigation:after {
-    top: 1px;
+  top: 1px;
 }
 
 /* Navigation bar display for medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
-    .top_bar li {
-        float: left;
-    }
-    .top_bar li a {
-        padding: 21px 40px;
-    }
-    .top_bar .links {
-        clear: none;
-        float: right;
-        max-height: none;
-    }
-    .top_bar .display {
-        display: none;
-    }
+  .top_bar li {
+      float: left;
+  }
+  .top_bar li a {
+      padding: 21px 40px;
+  }
+
+   /* Styling to change from hambbuger menu display to navigation bar */
+   
+  .top_bar .links {
+      clear: none;
+      float: right;
+      max-height: none;
+  }
+  
+  .top_bar .display {
+      display: none;
+  }
 }
 
 /* Navigation bar display for large devices (laptops/desktops, 992px and up) */
 
 @media only screen and (min-width: 992px) {
-    .top_bar li {
-        float: left;
-    }
-    .top_bar li a {
-        padding: 21px 60px;
-    }
-    .top_bar .links {
-        clear: none;
-        float: right;
-        max-height: none;
-    }
-    .top_bar .display {
-        display: none;
-    }
+  .top_bar li a {
+      padding: 21px 60px;
+  }
 }
-
-
-
-
-
-
-
-
-
 
 /* Command makes footer stick to bottom of the page and margins for page content*/
   
@@ -182,6 +171,8 @@ body {
   flex: 1;
   align-items: center;
 }
+
+/* Styling margins, padding  and text for section giving overview of blog page */
 
 .blog_list {
   margin: 70px 20px 0px 20px;
@@ -196,11 +187,11 @@ body {
   text-decoration: underline;
 }
 
-
-
 .blog_list p {
   font-size: 11.5pt;
 }
+
+/* Styling of box for index of blog posts */
 
 .blog_index {
   margin-top: 20px;
@@ -209,6 +200,8 @@ body {
   background: #abe0fe4d;
   box-shadow: 2px 2px 6px 1px rgba(18, 65, 206, 0.247);
 }
+
+/* Styling links and text in index box */
 
 .blog_index a {
   text-decoration: none;
@@ -236,6 +229,8 @@ body {
   padding-bottom: 10px;
 }
 
+/* Positioning of blog posts with flex */
+
 .blog_posts {
   margin: 25px 20px 80px 20px;
   text-align: left;
@@ -245,6 +240,8 @@ body {
   flex-direction: column;
 }
 
+/* Styling boxes of blog posts */
+
 .post_1, .post_2, .post_3, .post_4, .post_5 {
   padding: 15px 15px 15px 15px;
   margin: 30px 0px 30px 0px;
@@ -252,6 +249,8 @@ body {
   background: #4f9bf827;
   box-shadow: 2px 2px 6px 1px rgba(18, 65, 206, 0.247);
 }
+
+/* Styling text for blog posts */
 
 .blog_posts p {
   font-size: 11pt;
@@ -264,7 +263,6 @@ body {
   color: #012cad;
   font-size: 10pt;
 }
-
 
 .blog_posts h3 {
   color: #f80011;
@@ -295,7 +293,7 @@ body {
   text-decoration: underline;
 }
 
-
+/* Styling images in posts */
 
 .blog_posts img {
   max-height: auto;
@@ -312,31 +310,19 @@ body {
 /* Page content image and text display for medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
+
+  /* Text styling */
+
   .blog_list h2 {
     font-size: 24pt;
   }
-  
-  .blog_list p {
-    font-size: 12.5pt;
-    margin: 0px 125px 0px 125px;
-    text-align: center;
-  }
-  
-  .blog_index {
-    padding-left: 70px;
-    margin: 5% 14% 0% 14%;
-  }
 
-  .blog_index a, .blog_posts p, .blog_posts li {
+  .blog_index a, .blog_posts p, .blog_posts li, .blog_list p {
     font-size: 12.5pt;  
   }
 
   .blog_list li {
     font-size: 12pt;
-  }
-
-  .post_1, .post_2, .post_3, .post_4, .post_5 {
-    margin: 5% 8% 5% 8%; 
   }
 
   .blog_posts h3 {
@@ -351,6 +337,24 @@ body {
     font-size: 11pt;
   }
 
+  /* Padding and margins styling to chnage layout of page */
+
+  .blog_list p {
+    margin: 0px 125px 0px 125px;
+    text-align: center;
+  }
+  
+  .blog_index {
+    padding-left: 70px;
+    margin: 5% 14% 0% 14%;
+  }
+
+  .post_1, .post_2, .post_3, .post_4, .post_5 {
+    margin: 5% 8% 5% 8%; 
+  }
+
+  /* Image styling */
+
   .blog_posts img {
     max-height: auto;
     max-width: 330px;
@@ -360,25 +364,15 @@ body {
 /* Page content image and text for large devices (laptops/desktops, 992px and up) */
   
 @media only screen and (min-width: 992px) {
+
+  /* Text styling */
+
   .blog_list h2 {
     font-size: 28pt;
-  }
-  
-  .blog_list p {
-    margin: 0% 30% 0% 30%;
-  }
-  
-  .blog_index {
-    padding-left: 70px;
-    margin: 4% 25% 0% 25%;
   }
 
   .blog_index a, .blog_posts p, .blog_posts li, .blog_list p  {
     font-size: 13pt;  
-  }
-
-  .post_1, .post_2, .post_3, .post_4, .post_5 {
-    margin: 5% 14% 5% 14%; 
   }
 
   .blog_posts h3 {
@@ -393,6 +387,23 @@ body {
     font-size: 12pt;
   }
 
+  /* Padding and margins styling to chnage layout of page */
+  
+  .blog_list p {
+    margin: 0% 30% 0% 30%;
+  }
+  
+  .blog_index {
+    padding-left: 70px;
+    margin: 4% 25% 0% 25%;
+  }
+
+  .post_1, .post_2, .post_3, .post_4, .post_5 {
+    margin: 5% 14% 5% 14%; 
+  }
+
+  /* Image styling */
+  
   .blog_posts img {
     max-height: auto;
     max-width: 400px;
@@ -429,6 +440,8 @@ footer {
   font-size: 11pt;
   line-height: 0;
 }
+
+/* Link styling for footer */
 
 footer a {
   text-decoration: none;
@@ -477,12 +490,17 @@ a:hover {
   white-space: normal;
 }
 
-/* Footer bar display for medium devices, adjusting image font and sizing (landscape tablets, 768px and up) */
+/* Footer bar display for medium devices, adjusting image and font sizing (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
-footer {
+  
+  /* Text styling */
+  
+  footer {
     font-size: 12pt;
   }
+
+  /* Image styling */
 
   .sm_list img {
     max-width: 35px;
@@ -494,20 +512,18 @@ footer {
   }
 }
 
-/* Footer bar display for large devices, adjusting image font and sizing (laptops/desktops, 992px and up) */
+/* Footer bar display for large devices, adjusting image and font sizing (laptops/desktops, 992px and up) */
 
 @media only screen and (min-width: 992px) {
-footer {
-    font-size: 12pt;
-  }      
 
-.sm_list img {
+  /* Image styling */
+  
+  .sm_list img {
     max-width: 42px;
     max-height: 42px;
-  }
+   }
 
 .sm_list li {
     padding: 0px 13px;
   }
 }
-

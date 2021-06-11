@@ -1,167 +1,165 @@
-html, body {
-    margin: 0;
-    padding: 0;
-  }
+ /* General styling for body */
+
+ html, body {
+  margin: 0;
+  padding: 0;
+}
 
 body {
-    margin: 0;
-    font-family: 'Roboto Condensed', sans-serif;
-    background-color: white;
-    min-height: 100vh;
-    min-width: 100vw;
-    display: flex;
-    flex-direction: column;
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
- 
-  /* Top navigation bar with links to other pages and logo styling */
-  
+
+/* Top navigation bar with links to other pages and logo styling */
+
 .top_bar { 
-    background-color: #abe0fe;
-    box-shadow: 2px 2px 6px 1px rgba(18, 65, 206, 0.247);
-    position: fixed;
-    width: 100%;
-    height: auto;
-    font-family: 'Roboto Condensed', sans-serif; 
+  background-color: #abe0fe;
+  box-shadow: 2px 2px 6px 1px rgba(18, 65, 206, 0.247);
+  position: fixed;
+  width: 100%;
+  height: auto;
 }
-  
+
 .top_bar ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
-    background-color:rgb(233, 244, 255);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color:rgb(233, 244, 255);
 }
-  
+
 .top_bar li a {
-    display: block;
-    padding: 15px 15px;
-    border-right: 6px hidden #1242ce;
-    text-decoration: none;
-    color: #001861;
+  display: block;
+  padding: 15px 15px;
+  border-right: 6px hidden #1242ce;
+  text-decoration: none;
+  color: #001861;
 }
-  
+
+/* Styling hover effects for navigation bar */
+
 .top_bar li a:hover,
 .top_bar .button:hover {
-    font-size: 20px;
-    color: #1242ce;
-    font-weight: bold;
+  font-size: 20px;
+  color: #1242ce;
+  font-weight: bold;
 }
-  
+
+/* Styling logo in navigation bar */
+
 .top_bar .logo img{
-    max-height: 40px;
-    max-width: 40px;
-    padding: 7px 7px;
+  max-height: 40px;
+  max-width: 40px;
+  padding: 7px 7px;
 }
-  
+
 /* Transition to open drop-down menu */
-  
+
 .top_bar .links {
-    clear: both;
-    max-height: 0px;
-    transition: max-height .4s linear;
+  clear: both;
+  max-height: 0px;
+  transition: max-height .4s linear;
 }
-  
-  /* Drop-down menu display */
-  
+
+/* Drop-down menu display */
+
 .top_bar .display {
-    cursor: pointer;
-    display: inline-block;
-    float: right;
-    padding: 30px 19px;
-    position: relative;
-  }
-  
-.top_bar .display .navigation {
-    background: #f80011;
-    display: block;
-    height: 1.5px;
-    position: relative;
-    transition: .15s linear;
-    width: 22px;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 30px 19px;
+  position: relative;
 }
-  
+
+.top_bar .display .navigation {
+  background: #f80011;
+  display: block;
+  height: 1.5px;
+  position: relative;
+  transition: .15s linear;
+  width: 22px;
+}
+
 .top_bar .display .navigation:before,
 .top_bar .display .navigation:after {
-    background: #f80011;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition:  .15s linear;
-    width: 100%;
+  background: #f80011;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition:  .15s linear;
+  width: 100%;
 }
 
 .top_bar .display .navigation:before {
-    top: 6px;
+  top: 6px;
 }
 
 .top_bar .display .navigation:after {
-    top: -6px;
+  top: -6px;
 }
 
 /* Button to control drop-down menu */
 
 .top_bar .button {
-    display: none;
+  display: none;
 }
 
 .top_bar .button:checked ~ .links {
-    max-height: 600px;
+  max-height: 600px;
 }
 
 .top_bar .button:checked ~ .display .navigation {
-    background: transparent;
+  background: transparent;
 }
 
 .top_bar .button:checked ~ .display .navigation:before {
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .top_bar .button:checked ~ .display .navigation:after {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .top_bar .button:checked ~ .display:not(.steps) .navigation:before,
 .top_bar .button:checked ~ .display:not(.steps) .navigation:after {
-    top: 1px;
+  top: 1px;
 }
 
 /* Navigation bar display for medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
-    .top_bar li {
-        float: left;
-    }
-    .top_bar li a {
-        padding: 21px 40px;
-    }
-    .top_bar .links {
-        clear: none;
-        float: right;
-        max-height: none;
-    }
-    .top_bar .display {
-        display: none;
-    }
+  .top_bar li {
+      float: left;
+  }
+  .top_bar li a {
+      padding: 21px 40px;
+  }
+
+   /* Styling to change from hambbuger menu display to navigation bar */
+   
+  .top_bar .links {
+      clear: none;
+      float: right;
+      max-height: none;
+  }
+  
+  .top_bar .display {
+      display: none;
+  }
 }
 
 /* Navigation bar display for large devices (laptops/desktops, 992px and up) */
 
 @media only screen and (min-width: 992px) {
-    .top_bar li {
-        float: left;
-    }
-    .top_bar li a {
-        padding: 21px 60px;
-    }
-    .top_bar .links {
-        clear: none;
-        float: right;
-        max-height: none;
-    }
-    .top_bar .display {
-        display: none;
-    }
+  .top_bar li a {
+      padding: 21px 60px;
+  }
 }
 
 /* Command makes footer stick to bottom of the page and margins for page content*/
@@ -174,7 +172,8 @@ body {
   align-items: center;
 }
 
-/* Text styling within page contents */
+/* Styling and layout of text */
+
 .text {
   padding: 10px 20px 0px 20px;
   text-align: left;
@@ -191,7 +190,7 @@ body {
   margin-top: 10px;
 }
 
-/* Image styling within page contents */
+/* Logo styling using flex */
 
 .sm_icons_main {
   display: flex;
@@ -214,6 +213,9 @@ body {
 /* Page content with main social icons and text display for medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
+
+  /* Text styling */
+
   .text h2 {
     color: #f80011;
     font-size: 26pt;
@@ -224,6 +226,7 @@ body {
     margin-top: 13px;
   }
 
+  /* Using flex to make logos display in row as opposed to a column */
   .sm_icons_main {
     display: flex;
     flex-wrap: wrap;
@@ -231,6 +234,8 @@ body {
     justify-content: space-evenly;
   }
   
+  /* Image styling */
+
   .sm_icons_main li img {
     max-height: 115px;
     max-width: auto;
@@ -248,6 +253,9 @@ body {
 /* Page content with main social icons and text display for large devices (laptops/desktops, 992px and up) */
 
 @media only screen and (min-width: 992px) {
+
+  /* Text styling */
+
   .text h2 {
     color: #f80011;
     font-size: 32pt;
@@ -258,12 +266,7 @@ body {
     margin-top: 16px;
   }
 
-  .sm_icons_main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  /* Image styling */
   
   .sm_icons_main li img {
     max-height: 150px;
@@ -293,7 +296,6 @@ footer {
     margin-bottom: auto;
 }
 
-
 * {
     margin: 0;
     padding: 0;
@@ -310,6 +312,8 @@ footer {
     font-size: 11pt;
     line-height: 0;
   }
+
+/* Link styling for footer */
 
 footer a {
     text-decoration: none;
@@ -329,10 +333,6 @@ a:hover {
   }
 
   /* Display for section containing icons and links to social media */
-
-  sm_icons {
-    padding: 0px 20px;
-  }
 
 .sm_list {
     display: flex;
@@ -372,26 +372,30 @@ a:hover {
 /* Footer bar display for medium devices, adjusting image and font sizing (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
+
+    /* Text styling */
+
     footer {
         font-size: 12pt;
       }
 
-      .sm_list img {
-        max-width: 35px;
-        max-height: 35px;
-      }
-    
-      .sm_list li {
-        padding: 0px 10px;
-      }
+    /* Image styling */
+
+    .sm_list img {
+      max-width: 35px;
+      max-height: 35px;
+    }
+  
+    .sm_list li {
+      padding: 0px 10px;
+    }
 }
 
 /* Footer bar display for large devices, adjusting image and font sizing (laptops/desktops, 992px and up) */
 
 @media only screen and (min-width: 992px) {
-    footer {
-        font-size: 12pt;
-      }      
+
+    /* Image styling */    
     
     .sm_list img {
         max-width: 42px;
@@ -401,3 +405,4 @@ a:hover {
     .sm_list li {
         padding: 0px 13px;
     }
+}

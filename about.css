@@ -1,3 +1,5 @@
+ /* General styling for body */
+
 html, body {
     margin: 0;
     padding: 0;
@@ -5,7 +7,7 @@ html, body {
 
 body {
     margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     background-color: white;
     min-height: 100vh;
     min-width: 100vw;
@@ -21,7 +23,6 @@ body {
     position: fixed;
     width: 100%;
     height: auto;
-    font-family: 'Roboto Condensed', sans-serif; 
 }
   
 .top_bar ul {
@@ -40,13 +41,17 @@ body {
     color: #001861;
 }
   
+/* Styling hover effects for navigation bar */
+
 .top_bar li a:hover,
 .top_bar .button:hover {
     font-size: 20px;
     color: #1242ce;
     font-weight: bold;
 }
-  
+
+/* Styling logo in navigation bar */
+
 .top_bar .logo img{
     max-height: 40px;
     max-width: 40px;
@@ -135,11 +140,15 @@ body {
     .top_bar li a {
         padding: 21px 40px;
     }
+
+     /* Styling to change from hambbuger menu display to navigation bar */
+     
     .top_bar .links {
         clear: none;
         float: right;
         max-height: none;
     }
+    
     .top_bar .display {
         display: none;
     }
@@ -148,19 +157,8 @@ body {
 /* Navigation bar display for large devices (laptops/desktops, 992px and up) */
 
 @media only screen and (min-width: 992px) {
-    .top_bar li {
-        float: left;
-    }
     .top_bar li a {
         padding: 21px 60px;
-    }
-    .top_bar .links {
-        clear: none;
-        float: right;
-        max-height: none;
-    }
-    .top_bar .display {
-        display: none;
     }
 }
 
@@ -176,6 +174,7 @@ body {
 }
 
 /* Text styling within page contents */
+
 .text {
   margin: 70px 20px 0px 20px;
   text-align: left;
@@ -185,7 +184,6 @@ body {
   color: #f80011;
   font-size: 20pt;
   text-align: center;
-  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .text p {
@@ -200,6 +198,8 @@ body {
   font-size: 11.5pt;
 }
 
+/* Text styling of list items to highlight importance annd control layout with flex */
+
 .skills_overview li {
   margin-top: 10px;
   display:inline-block;
@@ -209,14 +209,14 @@ body {
   display: flex;
   justify-content: center;
   color: #1242ce;
-  font-family: 'Roboto Condensed', sans-serif;
 }
+
+/* Styling external link to Coder Academy's site */
 
 #coder_academy {
   color: #4f9bf8;
   font-weight: bold;
   text-decoration: none;
-  font-family: 'Roboto Condensed', sans-serif;
 }
 
 #coder_academy:hover {
@@ -240,7 +240,7 @@ body {
 
 @media only screen and (min-width: 768px) {
 
-  /* Text styling within page contents */
+  /* Styling to make image appear next to text as opposed to below */
 
   .page_contents {
     display: flex;
@@ -261,6 +261,8 @@ body {
     display: flex;
     justify-content: center;
   }
+
+  /* Text styling */
   
   .text {
     margin: 0px 20px 0px 20px; 
@@ -272,15 +274,11 @@ body {
     text-align: left;
   }
 
-  .text p {
+  .text p, .skills_overview {
     font-size: 12pt;
   }
-  
-  .skills_overview {
-    font-size: 12pt;
-  }
-  
-  /* Image styling within page contents */
+ 
+  /* Image styling */
   
   .image img {
     max-width: 300px;
@@ -292,47 +290,21 @@ body {
 
 @media only screen and (min-width: 992px) {
 
-  /* Text styling within page contents */
-  
-  .page_contents {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  /* Text styling */
 
   .text_and_list {
-    box-sizing: border-box;
-    width: 50%;
     font-size: 15pt;
   }  
   
-  .image {
-    box-sizing: border-box;
-    flex-grow: 1;
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .text {
-    margin: 0px 20px 0px 20px; 
-  }
-  
   .text h2 {
-    color: #f80011;
     font-size: 28pt;
-    text-align: left;
   }
 
-  .text p {
+  .text p, .skills_overview{
     font-size: 13pt;
   }
   
-  .skills_overview {
-    font-size: 13pt;
-  }
-  
-  /* Image styling within page contents */
+  /* Image styling */
   
   .image img {
     max-width: 400px;
@@ -371,6 +343,8 @@ footer {
   line-height: 0;
 }
 
+/* Link styling for footer */
+
 footer a {
   text-decoration: none;
   color: #ffffff;
@@ -378,6 +352,7 @@ footer a {
 
 a:hover {
   color: #f80011;
+  text-decoration: underline;
 }
 
 /* Display for section containing icons and links to social media */
@@ -420,9 +395,14 @@ a:hover {
 /* Footer bar display for medium devices, adjusting image and font sizing (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
-footer {
+  
+  /* Text styling */
+  
+  footer {
     font-size: 12pt;
   }
+
+  /* Image styling */
 
   .sm_list img {
     max-width: 35px;
@@ -437,21 +417,15 @@ footer {
 /* Footer bar display for large devices, adjusting image and font sizing (laptops/desktops, 992px and up) */
 
 @media only screen and (min-width: 992px) {
-footer {
-    font-size: 12pt;
-  }      
 
-.sm_list img {
+  /* Image styling */
+  
+  .sm_list img {
     max-width: 42px;
     max-height: 42px;
-  }
+   }
 
 .sm_list li {
     padding: 0px 13px;
   }
-}
-
-.blog_posts h3 {
-  color: #d60210;
-  text-align: center;
 }
