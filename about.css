@@ -450,3 +450,8 @@ footer {
     padding: 0px 13px;
 }
 }
+
+.blog_posts h3 {
+  color: #d60210;
+  text-align: center;
+}

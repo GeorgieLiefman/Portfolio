@@ -171,6 +171,8 @@ body {
 
 
 
+
+
 /* Command makes footer stick to bottom of the page and margins for page content*/
   
 .page_contents {
@@ -185,7 +187,6 @@ body {
   margin: 70px 20px 0px 20px;
   text-align: left;
 }
-
 
 .blog_list h2 {
   font-size: 20pt;
@@ -204,7 +205,6 @@ body {
   border-radius: 25px;
   background: #abe0fe4d;
   box-shadow: 2px 2px 6px 1px rgba(18, 65, 206, 0.247);
-  
 }
 
 .blog_index a {
@@ -212,7 +212,6 @@ body {
   color: #1242ce;
   font-size: 11.5pt;
   margin-bottom: 5px;
-  
 }
 
 .blog_index a:hover{
@@ -251,11 +250,6 @@ body {
   font-size: 11pt;
   padding-bottom: 7px;
   padding-top: 7px; 
-}
-
-.blog_posts h3 {
-  color: #d60210;
-  text-align: center;
 }
 
 #author_info {
@@ -300,81 +294,6 @@ body {
   border-radius: 50%;
  
 }
-
-
-
-/* Page content image and text display for medium devices (landscape tablets, 768px and up) */
-
-@media only screen and (min-width: 768px) {
-  
-  .blog_list h2 {
-    font-size: 24pt;
-    text-align: center;
-  }
-  
-  .blog_list p {
-    font-size: 12.5pt;
-    text-align: center;
-    display: inline-flex;
-    justify-content: center;
-  }
-
-  .blog_index {
-    padding-left: 12%;
-    margin: 5% 10% 5% 10%;
-  }
-
-  .blog_index a {
-    font-size: 12.5pt;  
-  }
-  
-  .blog_list {
-    font-size: 12pt;
-  }
-
-  .post_1, .post_2, .post_3, .post_4, .post_5 {
-    margin: 5% 10% 5% 10%; 
-  }
-
-  .blog_posts p {
-    font-size: 12pt;
-  }
-  
-  .blog_posts h3 {
-    font-size: 16.5pt;
-  }
-  
-  .blog_posts h4 {
-    font-size: 13.5pt;
-  }
-
-  #author_info {
-    font-size: 11pt;
-  }
-
-  .blog_posts img {
-    max-height: auto;
-    max-width: 330px;
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
