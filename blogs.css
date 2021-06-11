@@ -193,7 +193,10 @@ body {
   color: #f80011;
   text-align: center;
   padding: 10px 0px 10px 0px;
+  text-decoration: underline;
 }
+
+
 
 .blog_list p {
   font-size: 11.5pt;
@@ -214,10 +217,14 @@ body {
   margin-bottom: 5px;
 }
 
-.blog_index a:hover{
+.blog_posts a:hover{
   text-decoration: underline;
   color: #f80011;
   font-weight: bold;
+}
+
+#HTML_vs_HTML5, #github_article, #css_article, #sitemap_article, #html_article, #top_of_page h2 a:hover {
+  text-decoration: none
 }
 
 .blog_list ul {
@@ -232,7 +239,7 @@ body {
 .blog_posts {
   margin: 25px 20px 80px 20px;
   text-align: left;
-  color: #01004b;
+  color: #000000;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -242,7 +249,7 @@ body {
   padding: 15px 15px 15px 15px;
   margin: 30px 0px 30px 0px;
   border-radius: 25px;
-  background: #4f9bf850;
+  background: #4f9bf827;
   box-shadow: 2px 2px 6px 1px rgba(18, 65, 206, 0.247);
 }
 
@@ -258,8 +265,15 @@ body {
   font-size: 10pt;
 }
 
+
+.blog_posts h3 {
+  color: #f80011;
+  text-align: center;
+  font-size: 16pt;
+}
+
 .blog_posts h4 {
-  color: #97030f;
+  color: #c1010e;
   padding-top: 10px;
   font-size: 12.5pt;
 }
@@ -271,16 +285,17 @@ body {
 }
 
 .blog_posts a {
-  color: #012cad;
+  color: #f80011;
   text-decoration: none;
 }
 
 .blog_posts a:hover {
-  color: #f80011;
+  color: #012cad;
   font-weight: bold;
   text-decoration: underline;
-
 }
+
+
 
 .blog_posts img {
   max-height: auto;
@@ -292,11 +307,64 @@ body {
 
 .post_3 img, .post_5 img {
   border-radius: 50%;
- 
+}
+
+/* Page content image and text display for medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+  .blog_list h2 {
+    font-size: 24pt;
+  }
+  
+  .blog_list p {
+    font-size: 12.5pt;
+    margin: 0px 125px 0px 125px;
+    text-align: center;
+  }
+  
+  .blog_index {
+    padding-left: 12%;
+    margin: 5% 14% 0% 14%;
+  }
+
+  .blog_index a {
+    font-size: 12.5pt;  
+  }
+
+  .blog_list {
+    font-size: 12pt;
+  }
+
+  .post_1, .post_2, .post_3, .post_4, .post_5 {
+    margin: 5% 8% 5% 8%; 
+  }
+
+  .blog_posts p, .blog_posts li {
+    font-size: 12.5pt;
+  }
+
+  .blog_posts h3 {
+    font-size: 16.5pt;
+  }
+  
+  .blog_posts h4 {
+    font-size: 13.5pt;
+  }
+
+  #author_info {
+    font-size: 11pt;
+  }
+
+  .blog_posts img {
+    max-height: auto;
+    max-width: 330px;
 }
 
 
 
+
+
+}
 
 
 
@@ -366,6 +434,7 @@ footer a {
 
 a:hover {
   color: #f80011;
+  text-decoration: underline;
 }
 
 /* Display for section containing icons and links to social media */
@@ -438,3 +507,4 @@ footer {
     padding: 0px 13px;
 }
 }
+
